@@ -1,0 +1,19 @@
+Package: SonGotSTI
+Title: A Package for Cantonese Tokenisation
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Justin Chun-ting",
+           family = "Ho",
+           role = c("aut", "cre"),
+           email = "Justin.Ho@ed.ac.uk",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package tokenises Cantonese text.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1.9000
+Imports: 
+    jiebaR,
+    quanteda,
+    purrr

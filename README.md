@@ -4,7 +4,7 @@
 A Package for Cantonese Tokenisation
 
 ## Notes about the name
-![](https://github.com/justinchuntingho/SonGotSTI/blob/master/SonGotSTI.jpg)
+<img src="man/figures/SonGotSTI.jpg" align="right" height="200" />
 
 The name of the package comes from the Cantonese phrase “兒子生性病母倍感安慰”, a famous newspaper headline due to its ambiguity. It can be segmented as “兒子/生性/病母/倍感/安慰” (the sick mother feels comfort as the son is well-behaved) and also as “兒子/生性病/母/倍感/安慰” (the mother feels comfort as the son catches sexually transmitted infections); both of them are grammatically correct.
 
