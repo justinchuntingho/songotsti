@@ -15,7 +15,7 @@ This is a very raw version and more funtionalities will be added.
 
 ## Installation
 ```r
-devtools::install_github("justinchuntingho/LIHKGr")
+devtools::install_github("justinchuntingho/SonGotSTI")
 ```
 
 ## Example
