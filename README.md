@@ -9,7 +9,7 @@ The name of the package comes from the Cantonese phrase “兒子生性病母倍
 ## Introduction
 Tokenization, or unit segmentation, is an often the first step in pre-processing textual data. For Latin languages, tokenization is in general not a big issue due to its syntax, as words are usually separated with whitespaces. However, for Asian languages such as Chinese and Japanese, there is no spaces between characters and therefore tokenizers have to be used to come up with basic word units to allow for further analysis. This package addresses this problem.
 
-The package depends on `jiebaR`. The original model is supplemented by a Cantonese dictionary generated using Cantonese data from Facebook.
+The package depends on `jiebaR`. The original model is supplemented by a Cantonese dictionary generated using Cantonese data from Facebook (for now, more will be added).
 
 ## Rationale for the package
 There are many packages to perform tokenisation, but most of them are trained with Mandarin data and therefore perform poorly on Cantonese texts. There are also packages that you can train your own model, such as `quanteda`'s `text_collocation()` and `gensim`'s collocation detection. However, training a well-performed model often requires a large amount of data and time, which might not be practical for some researchers. Therefore, this package aims to offer an easier way to conduct Cantonese tokenisation by relying on a Cantonese dictionary generated and validated by the author.
