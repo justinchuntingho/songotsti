@@ -12,6 +12,10 @@ The name of the package comes from the Cantonese phrase “兒子生性病母倍
 ## Introduction
 Tokenization, or unit segmentation, is an often the first step in pre-processing textual data. For Latin languages, tokenization is in general not a big issue due to its syntax, as words are usually separated with whitespaces. However, for Asian languages such as Chinese and Japanese, there is no spaces between characters and therefore tokenizers have to be used to come up with basic word units to allow for further analysis. This package addresses this problem.
 
+The package depends on `jiebaR`. The original model is supplemented by a Cantonese dictionary generated using Cantonese data from Facebook.
+
+This is a very raw version and more funtionalities will be added.
+
 ## Installation
 ```r
 devtools::install_github("justinchuntingho/LIHKGr")
