@@ -18,7 +18,7 @@ There are many packages to perform tokenisation, but most of them are trained wi
 
 ## Installation
 ```r
-devtools::install_github("justinchuntingho/SonGotSTI")
+devtools::install_github("justinchuntingho/songotsti")
 ```
 
 ## Example
