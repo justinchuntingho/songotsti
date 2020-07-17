@@ -22,16 +22,6 @@ devtools::install_github("justinchuntingho/songotsti")
 ```
 
 ## Example
-The current version supports using in conjunction with `quanteda`.
-
-Setting up:
-```r
-library(quanteda)
-txt <- c(doc1 = "兒子生性病母倍感安慰",
-         doc2 = "今日下午三時半，高等法院就行政長官對梁頌恆、游蕙禎兩人的立法會議員資格提出司法覆核之案件頒發判詞，並判梁、游二人敗訴，亦即二人之議員資格被撤銷。")
-txt_corpus <- corpus(txt)
-```
-
 The `tokens_cantonese()` function currently accepts three data types. If the input is a string, it will return a vector:
 ```r
 tokens_cantonese("兒子生性病母倍感安慰")
@@ -39,11 +29,16 @@ tokens_cantonese("兒子生性病母倍感安慰")
 
 If the input is a vector, it will return a list of vectors:
 ```r
+txt <- c(doc1 = "兒子生性病母倍感安慰",
+         doc2 = "今日下午三時半，高等法院就行政長官對梁頌恆、游蕙禎兩人的立法會議員資格提出司法覆核之案件頒發判詞，並判梁、游二人敗訴，亦即二人之議員資格被撤銷。")
 tokens_cantonese(txt)
 ```
 
-It can also be put into a `quanteda` pipeline. If the input is a corpus, The `tokens_cantonese()` function will return a tokens object:
+The current version supports using in conjunction with `quanteda`. If the input is a corpus, The `tokens_cantonese()` function will return a tokens object. It can also be put into a pipeline:
 ```r
+library(quanteda)
+txt_corpus <- corpus(txt)
+
 txt_corpus %>% 
   tokens_cantonese() %>% 
   dfm()
