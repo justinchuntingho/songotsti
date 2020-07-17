@@ -32,7 +32,17 @@ txt <- c(doc1 = "兒子生性病母倍感安慰",
 txt_corpus <- corpus(txt)
 ```
 
-The library adds `tokens_cantonese()` function to the `quanteda` toolbox, which can be put into the pipe line:
+The `tokens_cantonese()` function currently accepts three data types. If the input is a string, it will return a vector:
+```r
+tokens_cantonese("兒子生性病母倍感安慰")
+```
+
+If the input is a vector, it will return a list of vectors:
+```r
+tokens_cantonese(txt)
+```
+
+It can also be put into a `quanteda` pipeline. If the input is a corpus, The `tokens_cantonese()` function will return a tokens object:
 ```r
 txt_corpus %>% 
   tokens_cantonese() %>% 
