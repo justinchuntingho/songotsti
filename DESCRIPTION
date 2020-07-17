@@ -13,7 +13,10 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1.9000
+StagedInstall: no
 Imports: 
-    jiebaR,
     quanteda,
-    purrr
+    purrr,
+    jiebaR
+Depends: 
+    R (>= 2.10)

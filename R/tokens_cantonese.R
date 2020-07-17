@@ -1,3 +1,7 @@
+tokenize_jieba <- function(texts){
+  return(purrr::map(texts, jiebaR::segment, .songotsti_tokenizer))
+}
+
 #' Tokenise Cantonese texts
 #'
 #' This function tokenises Cantonese texts and create a tokens object.
@@ -11,13 +15,17 @@
 #' \dontrun{
 #' corpus %>% tokens_cantonese() %>% dfm()
 #' }
-tokens_cantonese <- function(corpus){
-  sonpath <- find.package("SonGotSTI")
-  tokenizer <- jiebaR::worker(type = "mix", dict = file.path(sonpath,"dict", "dict.txt.big"),
-                              user = file.path(sonpath,"dict", "SonGotSTI.txt"))
-  raw_texts <- quanteda::texts(corpus)
-  tokenised_texts <- purrr::map(raw_texts, jiebaR::segment, tokenizer)
-  return(quanteda::as.tokens(tokenised_texts))
+tokens_cantonese <- function(x){
+  if(is.corpus(x)){  # if corpus
+    raw_texts <- quanteda::texts(corpus)
+    tokenised_texts <- tokenize_jieba(raw_texts)
+    return(quanteda::as.tokens(tokenised_texts))
+  } else if(is.character(x) & length(x) == 1){ # if string
+    return(unlist(tokenize_jieba(x)))
+  } else if(is.character(x)){ # if character vector
+    return(tokenize_jieba(x))
+  } else {
+    cat("Unknown data type")
+  }
 }
-
 
