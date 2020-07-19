@@ -4,10 +4,10 @@
 \alias{tokens_cantonese}
 \title{Tokenise Cantonese texts}
 \usage{
-tokens_cantonese(corpus)
+tokens_cantonese(x)
 }
 \arguments{
-\item{corpus}{a quanteda corpus object}
+\item{x}{string, character vector, or quanteda corpus object}
 }
 \value{
 a tokens object

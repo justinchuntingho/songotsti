@@ -4,7 +4,7 @@
 \alias{add_custom_words}
 \title{Add Custom Words}
 \usage{
-add_custom_words(words)
+add_custom_words(words, worker = .songotsti_tokenizer)
 }
 \arguments{
 \item{words}{string or character vector, words to be added}

@@ -6,7 +6,7 @@ tokenize_jieba <- function(texts){
 #'
 #' This function tokenises Cantonese texts and create a tokens object.
 #'
-#' @param corpus a quanteda corpus object
+#' @param x string, character vector, or quanteda corpus object
 #'
 #' @return a tokens object
 #' @export
@@ -16,7 +16,7 @@ tokenize_jieba <- function(texts){
 #' corpus %>% tokens_cantonese() %>% dfm()
 #' }
 tokens_cantonese <- function(x){
-  if(is.corpus(x)){  # if corpus
+  if(quanteda::is.corpus(x)){  # if corpus
     raw_texts <- quanteda::texts(corpus)
     tokenised_texts <- tokenize_jieba(raw_texts)
     return(quanteda::as.tokens(tokenised_texts))
