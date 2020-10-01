@@ -46,3 +46,6 @@ txt_corpus %>%
 
 ## Disclaimer
 This is a very raw version and more funtionalities will be added. Contributions, either in the form of pull request, data, or offer to validate new dictionaries, are most welcome.
+
+## Citation
+Ho, J.C. (2020). Songotsti. A Package for Cantonese Tokenisation. Source code and releases available at https://github.com/justinchuntingho/songotsti.
