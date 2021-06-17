@@ -14,6 +14,7 @@ The package depends on `jiebaR`. The original model is supplemented by the follo
 2. Cantonese dictionary generated using Cantonese data from Telegram
 3. Word list of [粵典](https://words.hk/)
 4. Words from [Hong Kong Cantonese Corpus (HKCanCor)](http://compling.hss.ntu.edu.sg/hkcancor/)
+5. Words from [Hong Kong Politics Dictionary](https://github.com/elgarteo/HKPolDict)
 
 ## Rationale for the package
 There are many packages to perform tokenisation, but most of them are trained with Mandarin data and therefore perform poorly on Cantonese texts. There are also packages that you can train your own model, such as `quanteda`'s `text_collocation()` and `gensim`'s collocation detection. However, training a well-performed model often requires a large amount of data and time, which might not be practical for some researchers. Therefore, this package aims to offer an easier way to conduct Cantonese tokenisation by relying on a Cantonese dictionary generated and validated by the author.
